@@ -1,0 +1,10 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: bikestore-rabbitmq
+    ports:
+      - "5672:5672"     # AMQP
+      - "15672:15672"   # Consola web: http://localhost:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: bikestore
+      RABBITMQ_DEFAULT_PASS: bikestore
